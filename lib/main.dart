@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tdx_wms_mobile/constants/app_constants.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
@@ -51,7 +52,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
         ),
       )
       ..loadRequest(
-        Uri.parse('http://tips004.cafe24.com:9007/'),
+        Uri.parse(AppConstants.webViewUrl),
         headers: {'Cache-Control': 'no-cache'},
       );
   }
